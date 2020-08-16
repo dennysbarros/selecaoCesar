@@ -22,8 +22,8 @@ _Trivago.features_ - Os passos do Trivago foram transformados em cenários de te
 
 #### Steps (definem as frases escritas nas Features):
 
-_steps.DiscourseSteps_ - Contém os a implementação dos métodos das features do Discourse
-_steps.Trivago_ - Contém os a implementação dos métodos das features do Trivago
+_steps.DiscourseSteps_ - Contém os a implementação dos métodos das features do Discourse <br>
+_steps.Trivago_ - Contém os a implementação dos métodos das features do Trivago <br>
 _steps.Hooks_ - Contém os métodos pra serem rodados antes ou depois das features. Neste projeto, somente @After está sendo utilizado
 
 #### Runner
@@ -32,8 +32,8 @@ _runner.CucumberRunner_ - Contém as definições do que deve ser rodado e onde 
 
 #### Pages (contém os elementos e métodos específicos de cada página, respeitando o padrão de projeto PageObject)
 
-_pages.DiscourseDemoPage_ - Contém o mapping dos elementos e métodos relacionados da página Demo do Discourse
-_pages.DiscourseMainPage_ - Contém o mapping dos elementos e métodos relacionados da página inicial do Discourse
+_pages.DiscourseDemoPage_ - Contém o mapping dos elementos e métodos relacionados da página Demo do Discourse <br>
+_pages.DiscourseMainPage_ - Contém o mapping dos elementos e métodos relacionados da página inicial do Discourse <br>
 _pages.TrivagoSearchPage_ - Contém o mapping dos elementos e métodos relacionados das interações de procura de quartos do Trivago
 
 
