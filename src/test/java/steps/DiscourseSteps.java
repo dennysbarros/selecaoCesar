@@ -8,16 +8,14 @@ import pages.DiscourseDemoPage;
 import pages.DiscourseMainPage;
 import util.Constants;
 import util.DriverFactory;
-import util.WebDriverUtils;
 
 public class DiscourseSteps {
 
-    private static final WebDriver driver = DriverFactory.getDriver();
-    private static final WebDriverUtils util = new WebDriverUtils();
-    private final DiscourseMainPage discourseMainPage = new DiscourseMainPage();
-    private final DiscourseDemoPage discourseDemoPage = new DiscourseDemoPage();
+    private final WebDriver driver = DriverFactory.getDriver();
+    private final DiscourseMainPage discourseMainPage = new DiscourseMainPage(driver);
+    private final DiscourseDemoPage discourseDemoPage = new DiscourseDemoPage(driver);
 
-    @Given("I open the discourse main page")
+    @Given("I open Discourse main page")
     public void openDiscourseMainPage() {
         driver.get(Constants.DISCOURSE_MAIN_URL);
         driver.manage().window().maximize();

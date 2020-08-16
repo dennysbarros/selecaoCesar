@@ -1,9 +1,9 @@
 @test
-Feature: Channels actions
+Feature: Discourse test
 
   @discourse
-  Scenario: Subscribe to a channel
-    Given I open the discourse main page
+  Scenario: Print description of locked topics, items of each category and most viewed topic
+    Given I open Discourse main page
     When I click in the Demo option in the main menu
     And I scroll until the end of the page
     Then I should print the description of all locked topics
