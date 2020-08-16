@@ -52,11 +52,17 @@ public class DiscourseDemoPage {
             categoryItems.add(categoryItem.getText());
         }
 
-        //Creates a new list of strings (uniqueCategories) based on categoryItem but eliminating duplicates
+        /*
+        * Creates a new list of strings (uniqueCategories)
+        * based on categoryItem but eliminating duplicates
+        */
         List<String> uniqueCategories = categoryItems.stream().
                 distinct().collect(Collectors.toList());
 
-        //For each item of uniqueCategories, check the occurrences inside categoryItems and print
+        /*
+        * For each item of uniqueCategories, check the occurrences
+        * inside categoryItems and print
+        */
         for (int index = 0; index < uniqueCategories.size(); index++) {
             int occurrences = Collections.frequency
                     (categoryItems, uniqueCategories.get(index));
@@ -73,8 +79,10 @@ public class DiscourseDemoPage {
         List<WebElement> allViews = driver.findElements(viewTitle);
         List<Integer> allNumbers = new ArrayList<>();
 
-        //Extract the title attribute of each view in the table, delete chars that are not digits
-        //and add to allNumbers list
+        /*
+        * Extract the title attribute of each view in the table,
+        * delete chars that are not digits and add to allNumbers list
+        */
         for (WebElement view : allViews) {
             String viewFormatted = util.replaceStringByRegex
                     (view.getAttribute("title"), "\\D+", "");
@@ -82,7 +90,7 @@ public class DiscourseDemoPage {
             allNumbers.add(Integer.parseInt(viewFormatted));
         }
 
-        String highestNumber = _returnHighestNumberOfList(allNumbers);
+        String highestNumber = _getHighestNumberOfList(allNumbers);
 
         By byTitleOfMostViewedTopic = By.xpath("//span[contains(@title,'"
                 + highestNumber + "')]/ancestor::tr//td//span/a");
@@ -96,7 +104,7 @@ public class DiscourseDemoPage {
      * @return a string with the highest number of the list, but adding the comma back to the string
      * @author Dennys Barros
      */
-    private String _returnHighestNumberOfList(List<Integer> listOfNumbers) {
+    private String _getHighestNumberOfList(List<Integer> listOfNumbers) {
         DecimalFormat formatter = new DecimalFormat("#,###");
         return formatter.format(Collections.max(listOfNumbers));
     }

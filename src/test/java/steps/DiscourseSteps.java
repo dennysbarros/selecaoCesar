@@ -21,7 +21,7 @@ public class DiscourseSteps {
         driver.manage().window().maximize();
     }
 
-    @When("I click in the Demo option in the main menu")
+    @When("I click on the Demo option in the main menu")
     public void clickDemoOptionFromMainMenu() {
         discourseMainPage.clickDemoMenuOption();
     }

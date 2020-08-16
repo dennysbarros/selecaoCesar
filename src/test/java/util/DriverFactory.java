@@ -12,16 +12,17 @@ public class DriverFactory {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
-
-            //Option to avoid Chrome detection
+            //Option to avoid Chrome detection so Trivago can work properly
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-blink-features=AutomationControlled");
-
+            
+            System.setProperty("webdriver.chrome.driver", "chromedriver");
             driver = new ChromeDriver(options);
 
+            // Add the 2 lines below back if Windows is being used
             // System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-            // driver = new ChromeDriver();
+            // driver = new ChromeDriver(options);
+
         }
         return driver;
     }
