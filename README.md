@@ -36,4 +36,5 @@ _pages.DiscourseDemoPage_ - Contém o mapping dos elementos e métodos relaciona
 _pages.DiscourseMainPage_ - Contém o mapping dos elementos e métodos relacionados da página inicial do Discourse <br>
 _pages.TrivagoSearchPage_ - Contém o mapping dos elementos e métodos relacionados das interações de procura de quartos do Trivago
 
-
+### Test plan da parte manual pode ser encontrado aqui:
+<https://drive.google.com/drive/folders/1IoWIuBv64LgSR8OLJr8AA9q0krV-d6QP>
