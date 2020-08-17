@@ -1,5 +1,8 @@
 ## Dennys Barros - QA Engineer - Seleção CESAR
 
+### Instalação
+Clone o projeto e import numa IDE (IntelliJ foi usado). Clique com o botão direito no arquivo pom.xml > Maven > Reimport
+
 ### Execução:
 
 Execute a classe CucumberRunner. O browser a ser utilizado deve ser o Google Chrome (foi utilizada a versão _84.0.4147.30_. O driver já está no projeto).
